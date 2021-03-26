@@ -1,0 +1,16 @@
+.header{
+    border-bottom: 1px solid rgb(248, 240, 240);
+    border-bottom-right-radius: 20px;  
+    border-bottom-left-radius: 20px;
+}
+ion-content{--background: rgba(224, 219, 219, 0.466);}
+ion-item{--background: rgba(224, 219, 219, 0.144);}
+/* DOES NOT WORK - not specific enough */
+.alert-wrapper {
+    background: #e5e5e5;
+  }
+  
+  /* Works - pass "my-custom-class" in cssClass to increase specificity */
+  .my-custom-class .alert-wrapper {
+    background: #e5e5e5;
+  }

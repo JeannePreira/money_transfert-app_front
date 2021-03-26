@@ -1,0 +1,54 @@
+.logo{
+    margin: 0 auto;
+    height: 100px;
+    margin-top: 20px;
+}
+    @media (min-width: 350px) and (max-width: 600px) {
+        .logo{
+            padding-top: 40px;
+        }
+    }
+    @media (min-width: 600px)and (max-width: 1024px) {
+        .calculator{
+            font-size:23px;
+        }
+        .logo{
+            height: 60px;
+        }
+        .login{
+            width: 20px;
+        }
+        
+    }
+.nom{
+    margin-top: 10px;
+    border-radius: 20px;
+}
+.login{
+    border-bottom: #07AEEF 3px solid;
+    margin: 0 auto;
+    margin-top:30px;
+    margin-bottom: -5px;
+}
+ion-content{--background: rgba(224, 219, 219, 0.466);}
+ion-item{--background: rgba(224, 219, 219, 0.144);}
+
+.frais{
+    width:40%;
+    float:right;
+    color:#E56946;
+}
+.montant{
+    width:100%;
+}
+.ion-header{background:rgba(206, 199, 199, 0.466);}
+
+/* DOES NOT WORK - not specific enough */
+.alert-wrapper {
+    background: #e5e5e5;
+  }
+  
+  /* Works - pass "my-custom-class" in cssClass to increase specificity */
+  .my-custom-class .alert-wrapper {
+    background: #e5e5e5;
+  }

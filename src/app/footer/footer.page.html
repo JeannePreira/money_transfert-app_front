@@ -1,0 +1,26 @@
+<router-outlet></router-outlet>
+<ion-tabs>
+
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="menu">
+      <ion-icon name="home-outline" class="icon-footer" [routerLink]="['/menu']"></ion-icon>
+      <ion-label>Tab 3</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="transaction">
+      <ion-icon name="reload-circle-outline" class="icon-footer" [routerLink]="['/transaction']"></ion-icon>
+      <ion-label>Tab 3</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="commission">
+      <ion-icon name="cash-outline" class="icon-footer" [routerLink]="['/commission']"></ion-icon>
+      <ion-label>Tab 3</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="frais">
+      <ion-icon name="cash-outline" class="icon-footer" [routerLink]="['/frais']"></ion-icon>
+      <ion-label>Tab 3</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+
+</ion-tabs>

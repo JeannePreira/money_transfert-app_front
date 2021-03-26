@@ -1,0 +1,105 @@
+
+<form [formGroup]="retraitForm">
+  <ion-header class="ion-header">
+    <ion-row>
+      <ion-col size="12" class="bg-light header">
+        <ion-img src="../assets/icon/logo.jpeg" alt=""  class="logo"></ion-img>
+        <ion-row>
+          <ion-col size="4" offset="" class="login">
+            <ion-icon name="return-up-back-outline" color="secondary"></ion-icon>
+            <span class="calculator">Retrait</span>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+      <ion-col size="10" offset="1">
+        <ion-item>
+          <ion-label position="floating" color="medium">Code</ion-label>
+          <ion-input type="text" id=""  formControlName="codeTransaction" [(ngModel)]="codeTransaction" (keyup)="data()"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12" class="bg-light nom">
+        <ion-segment (ionChange)="segmentChanged($event)">
+          <ion-segment-button value="beneficiaire">
+            <ion-label>Beneficiaire</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="emetteur">
+            <ion-label>Emetteur</ion-label>
+          </ion-segment-button>
+        </ion-segment>
+      </ion-col>
+    </ion-row>
+  </ion-header>
+  <ion-content>
+    <ion-grid>
+        <ion-row>
+            <ion-col size-sm="8" offset-sm="2" *ngIf="selectSegment == 'beneficiaire'">
+              <ion-item>
+                <ion-label position="floating" color="medium">N° CNI</ion-label>
+                <ion-input type="text" id=""  formControlName="CNI"></ion-input>
+              </ion-item>
+  
+              <ion-item class="simple">
+                <ion-label position="floating" color="medium">Nom & Prénom</ion-label>
+                <ion-input type="text"  [value]="nomComplet1"></ion-input>
+              </ion-item>
+  
+              <ion-item class="simple">
+                <ion-label position="floating" color="medium">Montant à recevoir</ion-label>
+                <ion-input type="text" readOnly [value]="montant"></ion-input>
+              </ion-item>
+  
+              <ion-item class="simple">
+                <ion-label position="floating" color="medium">Téléphone</ion-label>
+                <ion-input type="text" readOnly [value]="phone1"></ion-input>
+              </ion-item>
+  
+              <ion-item class="simple">
+                <ion-label position="floating" color="medium">Data de retrait</ion-label>
+                <ion-input type="text" readOnly [value]="dateRetrait"></ion-input>
+              </ion-item>
+  
+              <ion-row>
+                <ion-col size-sm="10" offset-sm="1" class="mt-5">
+                  <ion-button color="secondary" expand="block" [disabled]="true" shape="round block" class="ion-align-self-center">Suivant</ion-button>
+                </ion-col>
+              </ion-row>
+            </ion-col>
+  
+            <ion-col size-sm="8" offset-sm="2" *ngIf="selectSegment == 'emetteur'">
+              <ion-item class="simple">
+                <ion-label position="floating" color="medium">N° CNI</ion-label>
+                <ion-input type="text" readOnly [value]="cni2"></ion-input>
+              </ion-item>
+  
+              <ion-item class="simple">
+                <ion-label position="floating" color="medium">Nom & Prénom</ion-label>
+                <ion-input type="text" readOnly [value]="nomComplet2"></ion-input>
+              </ion-item>
+  
+              <ion-item class="simple">
+                <ion-label position="floating" color="medium">Montant envoyé</ion-label>
+                <ion-input type="text" readOnly [value]="montant"></ion-input>
+              </ion-item>
+  
+              <ion-item class="simple">
+                <ion-label position="floating" color="medium">Téléphone</ion-label>
+                <ion-input type="text" readOnly [value]="phone2"></ion-input>
+              </ion-item>
+  
+              <ion-item class="simple">
+                <ion-label position="floating" color="medium">Data d'envoi</ion-label>
+                <ion-input type="text" readOnly [value]="dateDepot"></ion-input>
+              </ion-item>
+  
+              <ion-row>
+                <ion-col size-sm="10" offset-sm="1" class="mt-5">
+                  <ion-button color="secondary" expand="block" shape="round block" class="ion-align-self-center" (click)="retrait()" [disabled]="!retraitForm.valid" [routerLink]="['/menu']">Suivant</ion-button>
+                </ion-col>
+              </ion-row>
+            </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-content>
+  </form>
+  
+  

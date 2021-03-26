@@ -1,0 +1,83 @@
+
+.logo{
+    margin: 0 auto;
+    height: 100px;
+    margin-top: 20px;
+}
+ion-img{
+    margin: 0 auto;
+}
+    @media (min-width: 350px)and (max-width: 600px) {
+        .logo{
+            padding-top: 40px;
+        }
+        ion-button{
+            margin-left:35%;
+        }
+    }
+    @media (min-width: 600px)and (max-width: 1024px) {
+        .calculator{
+            font-size:23px;
+        }
+        .logo{
+            height: 60px;
+        }
+        .login{
+            width: 20px;
+        }
+        
+    }
+    @media (min-width: 1000px){
+    
+    }
+.calculator{
+    margin: 0 auto;
+}
+.header{
+    border-bottom: 1px solid rgb(248, 240, 240);
+    border-bottom-right-radius: 20px;  
+    border-bottom-left-radius: 20px;
+    margin-bottom: 20px;
+}
+.simple{
+    height: 62px;
+}
+.nom{
+    background-color: white;
+    margin-top: 10px;
+    border-bottom: 1px solid white;
+    border-radius: 20px;
+}
+.p{
+    margin:0 auto;
+    margin-left: 40px;
+}
+.contain{
+    margin:0 auto;
+}
+.login{
+    border-bottom: #07AEEF 3px solid;
+    margin: 0 auto;
+    padding: 0 auto;
+    width: 80px;
+    margin-top:30px;
+    margin-bottom: -5px;
+}
+ion-content{--background: rgba(224, 219, 219, 0.466);}
+ion-item{--background: rgba(224, 219, 219, 0.144);}
+ion-button{
+    --background:#E56946;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    margin-left: 30%;
+    width: 50%;
+}
+.ion-header{background:rgba(206, 199, 199, 0.466);}
+.frais{
+    width:40%;
+    float:right;
+    color:#E56946;
+}
+.montant{
+    width:100%;
+}

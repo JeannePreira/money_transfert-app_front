@@ -1,0 +1,74 @@
+.logo{
+    height: 50px;
+    margin:0 auto;
+    margin-top: 50px;
+}
+.profil{
+    height: 70px;
+    margin:0 auto;
+    margin-left: 95%;
+    margin-top:-150px;
+}
+@media(max-width: 400px) {
+    .profil{
+        margin-left: 73%;
+        margin-bottom: -22px;
+        height: 50px;
+    }
+    .logo{
+        height: 50px;
+    } 
+    .head{
+        height: 30px;
+    } 
+}
+@media (max-width: 1000px) and (min-width: 400px) {
+    .profil{
+        margin-left: 80%;
+    }  
+    .back{
+       margin-left: 80%;
+    }
+}
+.login{
+    border-bottom: #07AEEF 2px solid;
+    margin-left:140px;
+}
+.head{
+    background-color:rgba(224, 219, 219, 0.466);
+    height: 300px;
+}
+.cash{
+    margin-top: 30px;
+    border-radius: 5px;
+    border-bottom: 1px solid #07AEEF;
+}
+.input{
+    border-bottom: 1px solid #E56946;
+}
+.contain{
+    margin-bottom:25px;
+}
+ion-icon{
+    color:#b35406d3;
+}
+.icon{
+    margin: 0 auto;
+    margin-bottom: -25px;
+    
+}
+.back{
+    margin: 0 auto;
+    color:#b35406d3;
+     margin-left: 98%;
+}
+.span{
+    margin: 0 auto;
+    width: 230px;
+    margin-bottom: -30px;
+    // margin-right: 35%;
+}
+.icon-footer{
+    margin: 0 auto;
+    margin-right: 60px;
+}

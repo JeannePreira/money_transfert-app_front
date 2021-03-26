@@ -1,0 +1,50 @@
+<ion-header class="ion-header">
+  <ion-row>
+    <ion-col size="12" class="bg-light header">
+      <ion-img src="../assets/icon/logo.jpeg" alt=""  class="logo"></ion-img>
+      <ion-row>
+
+        <ion-col size="6" offset="" class="login">
+          <ion-icon name="checkmark-done-circle-outline" color="secondary"></ion-icon>
+          <span class="calculator">Toutes les Transactions</span>
+        </ion-col>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size-sm="8" offset-sm="2"> 
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Date</th>
+              <th scope="col">Utilisateur</th>
+              <th scope="col">Type</th>
+              <th scope="col">Montant</th>
+              <th scope="col">Frais</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let transaction of transactions">
+              <td>{{transaction.dateTransaction}}</td>
+              <td>{{transaction.prenomClient}} {{transaction.nomClient}}</td>
+              <td>{{transaction.type}}</td>
+              <td>{{transaction.montant}}</td>
+              <td>{{transaction.frais}}</td>
+            </tr>
+          </tbody>
+        </table>
+
+      </ion-col>
+    </ion-row>
+    </ion-grid>
+</ion-content>
+
+
+
+
+      
+

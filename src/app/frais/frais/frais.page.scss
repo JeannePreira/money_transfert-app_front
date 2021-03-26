@@ -1,0 +1,54 @@
+.logo{
+    margin: 0 auto;
+    height: 100px;
+    margin-top: 50px;
+}
+ion-img{
+    margin: 0 auto;
+}
+    @media (min-width: 350px)and (max-width: 600px) {
+        .logo{
+            padding-top: 40px;
+        }
+    }
+    @media (min-width: 600px)and (max-width: 1024px) {
+        .calculator{
+            font-size:23px;
+        }
+        .logo{
+            height: 60px;
+        }
+        .login{
+            width: 20px;
+        }
+    }
+    @media (min-width: 1000px){
+    
+    }
+.calculator{
+    margin: 0 auto;
+}
+.header{
+    border-bottom: 1px solid rgb(248, 240, 240);
+    border-bottom-right-radius: 20px;  
+    border-bottom-left-radius: 20px;
+}
+.contain{
+    margin:0 auto;
+}
+.login{
+    border-bottom: #07AEEF 3px solid;
+    margin: 0 auto;
+    padding: 0 auto;
+    width: 80px;
+    margin-top:80px;
+    margin-bottom: -5px;
+}
+ion-content{--background: rgba(224, 219, 219, 0.466);}
+ion-item{--background: rgba(224, 219, 219, 0.144);}
+ion-button{
+    --background:#E56946;
+    margin:0 auto;
+    margin-left:40%;
+    margin-top: 40px;
+}

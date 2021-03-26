@@ -1,0 +1,101 @@
+
+    <ion-header class="ion-header">
+      <ion-row>
+        <ion-col size="12" class="bg-light header">
+          <ion-img src="../assets/icon/logo.jpeg" alt=""  class="logo"></ion-img>
+          <ion-row>
+            <ion-col size="4" offset="" class="login">
+              <ion-icon name="return-up-forward-outline" color="secondary"></ion-icon>
+              <span class="calculator">Depot</span>
+            </ion-col>
+          </ion-row>
+        </ion-col>
+        <ion-col size="12" class="bg-light nom">
+          <ion-segment (ionChange)="segmentChanged($event)">
+            <ion-segment-button value="emetteur">
+              <ion-label>Emetteur</ion-label>
+            </ion-segment-button>
+            <ion-segment-button value="beneficiaire">
+              <ion-label>Bénéficiaire</ion-label>
+            </ion-segment-button>
+          </ion-segment>
+        </ion-col>
+      </ion-row>
+    </ion-header>
+    <ion-content>
+      <ion-grid>
+        <form [formGroup]="depotForm">
+          <ion-row>
+              <ion-col size-sm="8" offset-sm="2" *ngIf="selectSegment == 'emetteur'">
+                <ion-item>
+                  <ion-label position="floating" color="medium">N° CNI</ion-label>
+                  <ion-input type="text" id=""  formControlName="cni1"></ion-input>
+                </ion-item>
+                <span class="text-danger row ml-5" *ngIf="cni.invalid && cni.touched">cni is required</span>
+    
+                <ion-item class="simple">
+                  <ion-label position="floating" color="medium">Nom</ion-label>
+                  <ion-input type="text" id=""  formControlName="nom1"></ion-input>
+                </ion-item>
+
+                <ion-item class="simple">
+                  <ion-label position="floating" color="medium">Prénom</ion-label>
+                  <ion-input type="text" id=""  formControlName="prenom1"></ion-input>
+                </ion-item>
+    
+                <ion-item class="simple">
+                  <ion-label position="floating" color="medium">Téléphone</ion-label>
+                  <ion-input type="text" id=""  formControlName="phone1"></ion-input>
+                </ion-item>
+    
+                <ion-item class="simple">
+                  <ion-label position="floating" color="medium">Montant</ion-label>
+                  <ion-input type="text" id=""  formControlName="montantDepot" [(ngModel)]="montant" (keyup)="getFrais()"></ion-input>
+                </ion-item>
+                                   
+                <ion-item class="frais">
+                  <ion-label position="floating" color="medium">frais</ion-label>
+                  <ion-input type="text" id=""  formControlName="frais" [(ngModel)]="frais"></ion-input>
+                </ion-item>
+ 
+                <ion-item class="montant">
+                  <ion-label position="floating" color="medium">toal</ion-label>
+                  <ion-input type="text" id=""  formControlName="total" [(ngModel)]="total"></ion-input>
+                </ion-item>
+
+                <ion-row>
+                  <ion-col size-sm="10" offset-sm="1" class="mt-5">
+                    <ion-button color="secondary" expand="block" shape="round block" class="ion-align-self-center">Suivant</ion-button>
+                  </ion-col>
+                </ion-row>
+              </ion-col>
+    
+              <ion-col size-sm="8" offset-sm="2" *ngIf="selectSegment == 'beneficiaire'">
+    
+                <ion-item class="simple">
+                  <ion-label position="floating" color="medium">Nom</ion-label>
+                  <ion-input type="text" id=""  formControlName="nom2"></ion-input>
+                </ion-item>
+
+                <ion-item class="simple">
+                  <ion-label position="floating" color="medium">Prénom</ion-label>
+                  <ion-input type="text" id=""  formControlName="prenom2"></ion-input>
+                </ion-item>
+    
+                <ion-item class="simple">
+                  <ion-label position="floating" color="medium">Téléphone</ion-label>
+                  <ion-input type="text" id=""  formControlName="phone2"></ion-input>
+                </ion-item>
+    
+                <ion-row>
+                  <ion-col size-sm="10" offset-sm="1" class="mt-5">
+                    <ion-button color="secondary" expand="block" shape="round block" class="ion-align-self-center" (click)="depot()" [disabled]="!depotForm.valid">Suivant</ion-button>
+                  </ion-col>
+                </ion-row>
+              </ion-col>
+          </ion-row>
+        </form>
+        </ion-grid>
+      </ion-content>
+
+    

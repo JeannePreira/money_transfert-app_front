@@ -1,0 +1,31 @@
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+        <ion-col size="12" class="bg-light header">
+          <ion-img src="../assets/icon/logo.jpeg" alt=""  class="logo" style="height: 100px; margin-top: 50px;"></ion-img>
+          <p class=" text-center" size="8" style="border-bottom: #07AEEF 3px solid;margin: 0 auto;
+          width: 80px;margin-top:80px;margin-bottom: -5px;">Login</p>
+        </ion-col>
+          <ion-col size-sm="8" offset-sm="2">
+            <form #loginForm="ngForm" >
+              <ion-item>
+                <ion-label position="floating" color="medium">UserName</ion-label>
+                <ion-input type="text" name="username" ngModel #username="ngModel" required></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="floating" color="medium">Password</ion-label>
+                <ion-input type="password" name="password" ngModel required></ion-input>
+              </ion-item>
+              <div class="mt-4 ml-3 mot" style="color:#25c9f6"><p>Mot de passe oublié?</p></div>
+              <ion-row>
+                <ion-col size="10" offset="1">
+                  <ion-button color="secondary" expand="block" shape="round block" class="ion-align-self-center" (click)="Login()" [disabled]="!loginForm.valid">Connexion</ion-button>
+                </ion-col>
+              </ion-row>
+            </form>
+            </ion-col>
+
+      </ion-row>
+    </ion-grid>
+</ion-content>

@@ -1,0 +1,79 @@
+<ion-header>
+  <ion-row>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-menu-button color="secondary"></ion-menu-button>
+      </ion-buttons>
+    </ion-toolbar>
+    <ion-col size="12" class="head">
+      <ion-img src="../assets/icon/logo.jpeg" alt=""  class="logo"></ion-img>
+      <img src="../assets/icon/avatar.jpg" alt="" class="rounded-circle profil">
+      <ion-row>
+        <ion-col class="cash col-10 bg-light" size="10" offset="1">
+          <span class="">Mon solde disponible</span><br>
+          <span style="font-size:30px; color:#07AEEF" class="">150000 FCFA</span><br>
+          <span class="">Mise à jour le 22-02-21 à 13:15 </span>
+        </ion-col>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+</ion-header>
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      
+      <ion-col size-sm="8" offset-sm="2" class="contain">
+        <ion-row>
+          <ion-col size-sm="12" class="input" [routerLink]="['/depot']">
+            <ion-icon name="return-up-forward-outline" class="icon"></ion-icon>
+            <p class="span">Depot</p>
+            <ion-icon name="chevron-forward-outline" class="back"></ion-icon>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size-sm="12" class="input" [routerLink]="['/retrait']">
+            <ion-icon name="return-up-back-outline" class="icon"></ion-icon>
+            <p class="span">Retrait</p>
+            <ion-icon name="chevron-forward-outline" class="back"></ion-icon>
+          </ion-col>
+        </ion-row>
+        
+        <ion-row>
+          <ion-col size-sm="12" class="input" [routerLink]="['/transaction']">
+            <ion-icon name="sync-circle-outline" class="icon" class="icon"></ion-icon>
+            <p class="span">Mes Transactions</p>
+            <ion-icon name="chevron-forward-outline" class="back"></ion-icon>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size-sm="12" class="input" [routerLink]="['/all-transaction']">
+            <ion-icon name="checkmark-done-circle-outline" class="icon"></ion-icon>
+            <p class="span">Toutes les Transactions</p>
+            <ion-icon name="chevron-forward-outline" class="back"></ion-icon>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size-sm="12" class="input" [routerLink]="['/commission']">
+            <ion-icon name="cash-outline" class="icon"></ion-icon>
+            <p class="span">Commission</p>
+            <ion-icon name="chevron-forward-outline" class="back"></ion-icon>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size-sm="12" class="input" [routerLink]="['/frais']">
+            <ion-icon name="cash-outline" class="icon"></ion-icon>
+            <p class="span">Calculator</p>
+            <ion-icon name="chevron-forward-outline" class="back"></ion-icon>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size-sm="12" class="input" [routerLink]="['/login']">
+            <ion-icon name="exit-outline" class="icon"></ion-icon>
+            <p class="span" (click)="deconnect()">Déconnexion</p>
+            <ion-icon name="chevron-forward-outline" class="back"></ion-icon>
+          </ion-col>
+        </ion-row>
+      </ion-col> 
+    </ion-row>
+  </ion-grid>
+</ion-content>

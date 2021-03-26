@@ -1,0 +1,91 @@
+
+.logo{
+    margin: 0 auto;
+    height: 100px;
+    margin-top: 20px;
+}
+ion-img{
+    margin: 0 auto;
+}
+    @media (min-width: 350px)and (max-width: 600px) {
+        .logo{
+            padding-top: 40px;
+        }
+        // .span{
+        //     background:white;
+        //     padding: 0px 25px 0px 1px;
+        //     font-size:15px;
+        //     border-radius:5px;
+        //     margin-right: 5px;
+        // }
+        th{
+            font-size: 10px;
+        }
+        td{
+            font-size: 10px;  
+        }
+    }
+    @media (min-width: 600px)and (max-width: 1024px) {
+        .logo{
+            height: 60px;
+        }
+        .login{
+            width: 20px;
+        }
+        .span{
+            background:white;
+            padding: 0px 35px 0px 1px;
+            font-size:15px;
+            border-radius:5px;
+            margin-right: 100px;
+        }
+        .caractere{
+            margin: 0 auto;
+            margin-left: 45px;
+        }  
+    }
+.calculator{
+    margin: 0 auto;
+}
+.header{
+    border-bottom: 1px solid rgb(248, 240, 240);
+    border-bottom-right-radius: 20px;  
+    border-bottom-left-radius: 20px;
+}
+.contain{
+    margin:0 auto;
+}
+.login{
+    border-bottom: #07AEEF 3px solid;
+    margin: 0 auto;
+    padding: 0 auto;
+    width: 80px;
+    margin-top:30px;
+    margin-bottom: -5px;
+}
+.frais{
+    width:40%;
+    float:right;
+    color:#E56946;
+}
+.span{
+    background:white;
+    padding: 0px 45px 0px 1px;
+    font-size:20px;
+    border-radius:5px;
+    margin-left: 10px;
+}
+ion-content{--background: rgba(224, 219, 219, 0.466);}
+.ion-header{background:rgba(206, 199, 199, 0.466);}
+.footer{
+    margin-top: 240px;
+}
+th, td{
+    padding:0px 10px 0px 5px;
+}
+table{
+    margin-top:30px;
+}
+
+
+

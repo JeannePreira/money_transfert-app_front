@@ -1,0 +1,46 @@
+<ion-header class="ion-header">
+  <ion-row>
+    <ion-col size="12" class="bg-light header">
+      <ion-img src="../assets/icon/logo.jpeg" alt=""  class="logo"></ion-img>
+      <ion-row>
+
+        <ion-col size="4" offset="" class="login">
+          <ion-icon name="calculator-outline" color="secondary"></ion-icon>
+          <span class="calculator">Mes Commissions</span>
+        </ion-col>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size-sm="8" offset-sm="2"> 
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Date</th>
+              <th scope="col">Type</th>
+              <th scope="col">Montant</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let transaction of transactions">
+              <td>{{transaction.dateTransaction}}</td>
+              <td>{{transaction.type}}</td>
+              <td>{{transaction.montant}}</td>
+            </tr>
+          </tbody>
+        </table>
+
+      </ion-col>
+    </ion-row>
+    </ion-grid>
+</ion-content>
+
+
+
+
+      
+

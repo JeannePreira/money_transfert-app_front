@@ -1,0 +1,39 @@
+ion-content.background{
+    --background:url('../../../assets/icon/font.jpeg') 0 0/100% 100% no-repeat;
+ }
+ .round{
+    margin:0 auto;
+    margin-top:300px;
+ }
+ .logo{
+    margin-bottom: 30px;
+    
+ }
+ @media only screen and (min-width: 600px) {
+    .round{
+       height: 400px;
+       width: 400px;
+    }
+    .logo{
+       padding-top: 60px;
+    }
+  }
+  @media (min-width: 800px)and (max-width: 1000px) {
+    .round{
+       height: 400px;
+       width: 400px;
+    }
+  }
+  @media (min-width: 1000px){
+    .round{
+       margin:0 auto;
+       margin-top:400px;
+    }
+  }
+ ion-img{
+    padding:20px;
+    height: 150px;
+    margin-top:70px;
+ }
+ 
+ 
